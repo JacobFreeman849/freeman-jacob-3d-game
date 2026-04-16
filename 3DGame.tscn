@@ -1685,7 +1685,10 @@ transform = Transform3D(1.0000323, 0, 0, 0, 1, 0, 0, 0, 1, -0.024104118, 0, -0.0
 shape = SubResource("BoxShape3D_eu6n3")
 
 [node name="Mug" parent="Outer Build/StaticBody3D6" unique_id=1149021658 instance=ExtResource("23_rjpag")]
-transform = Transform3D(0.06578724, 0, 0, 0, 0.29460612, 0, 0, 0, 0.031927954, 0.43490827, -8.142948, -3.1116142)
+transform = Transform3D(0.06578723, 0, 0, 0, 0.29460612, 0, 0, 0, 0.031927954, 0.6456182, -8.142948, -3.1116142)
+
+[node name="Mug2" parent="Outer Build/StaticBody3D6" unique_id=1651552453 instance=ExtResource("23_rjpag")]
+transform = Transform3D(0.065787226, 0, 0, 0, 0.29460612, 0, 0, 0, 0.031927954, 0.6456183, -8.142948, -3.2623887)
 
 [node name="Lighting" type="CSGCombiner3D" parent="." unique_id=1783619957]
 
