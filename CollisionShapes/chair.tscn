@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d18i0efm8mbuq"]
+
+[ext_resource type="PackedScene" uid="uid://cmasmgj6n4nwn" path="res://Addons/brackeys_3d_game_assets/dungeon_assets/props/chair.glb" id="1_2sna5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sc4di"]
+size = Vector3(0.23828125, 1.2098389, 0.7541504)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_670l2"]
+size = Vector3(0.5423584, 0.48968506, 0.7541504)
+
+[node name="Chair" type="StaticBody3D" unique_id=393865530]
+
+[node name="chair2" parent="." unique_id=1497619502 instance=ExtResource("1_2sna5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392802671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25195313, 0.6176369, -0.009399414)
+shape = SubResource("BoxShape3D_sc4di")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=801947610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09594357, 0.25756, -0.009399414)
+shape = SubResource("BoxShape3D_670l2")

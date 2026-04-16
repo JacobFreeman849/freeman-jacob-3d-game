@@ -1,0 +1,232 @@
+[gd_scene format=3 uid="uid://bgimoes5q1715"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Addons/brackeys-proto-controller-main/brackeys-proto-controller-main/proto_controller/proto_controller.tscn" id="1_1oj5k"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yx7mw"]
+sky_top_color = Color(0.4346854, 0.5082628, 0.6064093, 1)
+sky_horizon_color = Color(0.7191968, 0.7298412, 0.7453778, 1)
+ground_horizon_color = Color(0.7191968, 0.7298412, 0.7453778, 1)
+
+[sub_resource type="Sky" id="Sky_ykeeq"]
+sky_material = SubResource("ProceduralSkyMaterial_yx7mw")
+
+[sub_resource type="Environment" id="Environment_6bm6p"]
+background_mode = 2
+sky = SubResource("Sky_ykeeq")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_dugkq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2pltu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f52ns"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5ukw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4srsv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mf81u"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_02kkc"]
+
+[node name="Main Game" type="Node3D" unique_id=1912184588]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=177530393]
+environment = SubResource("Environment_6bm6p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1690855919]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 47.471428, 31.10328, -6.6005173)
+shadow_enabled = true
+
+[node name="Main Building" type="CSGMesh3D" parent="." unique_id=682984138]
+
+[node name="Floor" type="CSGMesh3D" parent="Main Building" unique_id=828476109]
+transform = Transform3D(32.339996, 0, 0, 0, 1, 0, 0, 0, 32.480003, 0, 0, 0)
+mesh = SubResource("BoxMesh_dugkq")
+
+[node name="Ceiling" type="CSGMesh3D" parent="Main Building" unique_id=69659531]
+transform = Transform3D(32.339996, 0, 0, 0, 1, 0, 0, 0, 32.480003, 0, 17.50754, 0)
+mesh = SubResource("BoxMesh_dugkq")
+
+[node name="Walls" type="CSGMesh3D" parent="Main Building" unique_id=1296557479]
+transform = Transform3D(1, 0, 0, 0, 8.75, 0, 0, 0, 32.20699, -15.649138, 4.8584833, 0.028691292)
+mesh = SubResource("BoxMesh_2pltu")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Main Building/Walls" unique_id=746496628]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1.00895, 31.31783, 0.99999994, -0.00055268535)
+mesh = SubResource("BoxMesh_2pltu")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="Main Building/Walls" unique_id=43246372]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 1.00895, -0.026283264, 0.9999999, -0.00055268535)
+mesh = SubResource("BoxMesh_2pltu")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Main Building/Walls" unique_id=287613827]
+transform = Transform3D(31.047182, 0, 0, 0, 1.0931488, 0, 0, 0, 0.03104916, 15.741603, -0.046874166, -0.48890468)
+mesh = SubResource("BoxMesh_f52ns")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Main Building/Walls" unique_id=196375553]
+transform = Transform3D(31.047182, 0, 0, 0, 1.0931487, 0, 0, 0, 0.03104916, 15.741603, 0.95280206, -0.48890468)
+mesh = SubResource("BoxMesh_f52ns")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Main Building/Walls" unique_id=1379217420]
+transform = Transform3D(31.047182, 0, 0, 0, 1.0931487, 0, 0, 0, 0.03104916, 15.741603, -0.046874166, 0.48821196)
+mesh = SubResource("BoxMesh_f52ns")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Main Building/Walls" unique_id=581591987]
+transform = Transform3D(31.047182, 0, 0, 0, 1.0931487, 0, 0, 0, 0.03104916, 15.741603, 0.94900244, 0.48821196)
+mesh = SubResource("BoxMesh_f52ns")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Main Building/Walls" unique_id=1190014619]
+transform = Transform3D(2.1280835, 0, 0, 0, 1.1311313, 0, 0, 0, 0.39576015, 31.308512, 0.03009963, -0.20678514)
+size = Vector3(0.48034668, 1, 1.5082397)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Main Building/Walls" unique_id=984053675]
+transform = Transform3D(2.1280835, 0, 0, 0, 1.1311313, 0, 0, 0, 0.1569969, 31.308512, 0.03009963, 0.38683686)
+size = Vector3(0.48034668, 1, 1.4949951)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Main Building/Walls" unique_id=105369900]
+transform = Transform3D(2.1280835, 0, 0, 0, 1.1311313, 0, 0, 0, 0.1569969, 31.308512, 0.49321175, 0.17972806)
+size = Vector3(0.48034668, 0.18115234, 1.1669312)
+
+[node name="Stairs" type="CSGMesh3D" parent="Main Building" unique_id=811623861]
+transform = Transform3D(4.81, 0, 0, 0, 0.6, 0, 0, 0, 0.7, -10.383273, 0.57737637, 9.493531)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Main Building/Stairs" unique_id=43073844]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.0000019, -1)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="Main Building/Stairs" unique_id=1284412878]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 2.000002, -2)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Main Building/Stairs" unique_id=2033445589]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 3.000002, -3)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Main Building/Stairs" unique_id=254768193]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 4.000002, -4)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="Main Building/Stairs" unique_id=1034727361]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 4.9999995, -5)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D9" unique_id=870473668]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.0000019, -1)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D9" unique_id=1806237153]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 2.000002, -2)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D9" unique_id=856364794]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 3.000002, -3)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D9" unique_id=2019959129]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 4.000002, -4)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="Main Building/Stairs" unique_id=648494980]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 9.999999, -10)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D10" unique_id=583973700]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 1.0000019, -1)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D10" unique_id=1938372625]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 2.000002, -2)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D10" unique_id=558641212]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 3.000002, -3)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Main Building/Stairs/CSGMesh3D10" unique_id=888309292]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 4.000002, -4)
+mesh = SubResource("BoxMesh_l5ukw")
+
+[node name="2nd Floor" type="CSGMesh3D" parent="Main Building" unique_id=1556070373]
+transform = Transform3D(30.544798, 0, 0, 0, 1, 0, 0, 0, 14.760001, 0, 8.737754, -8)
+mesh = SubResource("BoxMesh_4srsv")
+
+[node name="Outdoor Ground2" type="CSGCombiner3D" parent="." unique_id=1456110384]
+
+[node name="Outdoor Ground" type="CSGMesh3D" parent="Outdoor Ground2" unique_id=1874877910]
+transform = Transform3D(30.647032, 0, 0, 0, 1, 0, 0, 0, 32.4355, 31.517117, 0, -0.07676363)
+mesh = SubResource("BoxMesh_mf81u")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Outdoor Ground2" unique_id=1513550848]
+transform = Transform3D(30.647032, 0, 0, 0, 1, 0, 0, 0, 32.4355, 31.517117, 0, 32.358738)
+mesh = SubResource("BoxMesh_mf81u")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Outdoor Ground2" unique_id=966121577]
+transform = Transform3D(33.711735, 0, 0, 0, 1, 0, 0, 0, 32.4355, 0.87008476, 0, 32.358738)
+mesh = SubResource("BoxMesh_mf81u")
+
+[node name="Pillars" type="CSGCombiner3D" parent="." unique_id=1018839157]
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Pillars" unique_id=777759207]
+transform = Transform3D(1, 0, 0, 0, 4.212, 0, 0, 0, 1, 6, 4, -2)
+mesh = SubResource("CylinderMesh_02kkc")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="Pillars" unique_id=1383640152]
+transform = Transform3D(1, 0, 0, 0, 4.212, 0, 0, 0, 1, 12.091067, 4, -2)
+mesh = SubResource("CylinderMesh_02kkc")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Pillars" unique_id=1287735580]
+transform = Transform3D(1, 0, 0, 0, 4.212, 0, 0, 0, 1, -6, 4, -2)
+mesh = SubResource("CylinderMesh_02kkc")
+
+[node name="Pillars" type="CSGMesh3D" parent="Pillars" unique_id=1877733771]
+transform = Transform3D(1, 0, 0, 0, 4.212, 0, 0, 0, 1, 0, 4, -2)
+mesh = SubResource("CylinderMesh_02kkc")
+
+[node name="Outside area" type="CSGCombiner3D" parent="." unique_id=1436334571]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Outside area" unique_id=398866751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.548734, 9.577986, 32.193645)
+size = Vector3(15.241943, 1, 32)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Outside area" unique_id=1602051256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.2941427, -0.97118187, 9.109151, 36.448944)
+polygon = PackedVector2Array(-0.21895647, -8.747909, 0, 1, 1, 1, 12.938795, -8.927035)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Outside area" unique_id=1302767987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.557225, 5.29636, 48.229362)
+size = Vector3(15.225464, 9.596252, 0.6689453)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Outside area" unique_id=674760013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.692322, 0.99983597, 48.229362)
+size = Vector3(50.306946, 1.0032043, 0.6689453)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Outside area" unique_id=1536243865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.48806, 0.99983597, 16.137321)
+size = Vector3(0.71546936, 1.0032043, 64.85303)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Outside area" unique_id=612027408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.48976, 0.99983597, -16.030037)
+size = Vector3(30.71207, 1.0032043, 0.51831055)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Outside area" unique_id=2100816430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.557225, 10.536781, 48.229362)
+size = Vector3(15.225464, 1.6399231, 0.6689453)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Outside area" unique_id=1834236292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.818144, 5.2870026, 32.005642)
+size = Vector3(0.77757263, 9.699097, 31.840576)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Outside area" unique_id=2098387540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.818144, 10.441169, 32.005642)
+size = Vector3(0.77757263, 1.7958374, 31.840576)
+
+[node name="ProtoController" parent="." unique_id=267657301 instance=ExtResource("1_1oj5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.788406, 0.5752754, 43.080368)
+script = null
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1994234644]
+transform = Transform3D(0.9077775, 0.08362526, 0.41103148, 0, -0.97992474, 0.19936784, 0.4194521, -0.18098164, -0.8895536, 13.361509, 13.893799, -14.16231)
+light_energy = 35.215
