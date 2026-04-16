@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://libfba7fa1mm" path="res://Addons/brackeys_3d_game_assets/dungeon_assets/building/floor_wood.glb" id="21_mj1nm"]
 [ext_resource type="PackedScene" uid="uid://b0anjbtnuj2jb" path="res://Addons/brackeys_3d_game_assets/dungeon_assets/building/wall_archedwindow_gated.glb" id="22_3rcwj"]
 [ext_resource type="PackedScene" uid="uid://csrkmsoeqfwt5" path="res://CollisionShapes/coins.tscn" id="22_wreo3"]
+[ext_resource type="PackedScene" uid="uid://cqq5bk7bpya1s" path="res://CollisionShapes/mug.tscn" id="23_rjpag"]
 [ext_resource type="PackedScene" uid="uid://btmp5lxium8rg" path="res://Addons/brackeys_3d_game_assets/dungeon_assets/building/ceiling.glb" id="23_th4c6"]
 [ext_resource type="PackedScene" uid="uid://bc7jbiopawqhl" path="res://Addons/brackeys_3d_game_assets/dungeon_assets/building/wall_half_endcap.glb" id="24_2jyiq"]
 [ext_resource type="PackedScene" uid="uid://cs7yxculj84ad" path="res://CollisionShapes/ramp.tscn" id="25_2jyiq"]
@@ -1682,6 +1683,9 @@ transform = Transform3D(-3.6197932, 0, -6.824157e-07, 0, 0.34482753, 0, 3.164523
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Outer Build/StaticBody3D6" unique_id=891827641]
 transform = Transform3D(1.0000323, 0, 0, 0, 1, 0, 0, 0, 1, -0.024104118, 0, -0.0044555664)
 shape = SubResource("BoxShape3D_eu6n3")
+
+[node name="Mug" parent="Outer Build/StaticBody3D6" unique_id=1149021658 instance=ExtResource("23_rjpag")]
+transform = Transform3D(0.06578724, 0, 0, 0, 0.29460612, 0, 0, 0, 0.031927954, 0.43490827, -8.142948, -3.1116142)
 
 [node name="Lighting" type="CSGCombiner3D" parent="." unique_id=1783619957]
 
